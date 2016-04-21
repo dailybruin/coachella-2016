@@ -17,14 +17,15 @@ function init() {
 	$.getJSON(recapsheeturl, function(data) {
 		data = clean_google_sheet_json(data);
 		if (data.length > 0) {
-			// $(".recap").html(format_body_text(data[0].text));	
-			var recaparray = format_body_text(data[0].text);
+			// $(".recap").html(format_body_text(todaysrecap.text));
+			var todaysrecap = data[0];
+			var recaparray = format_body_text(todaysrecap.text);
 			var halfway = Math.floor(recaparray.length / 2) + 3;
-			recaparray.splice(0, 0, "<h2 class=\"recap-headline\">" + data[0].headline + "</h2>");
-			recaparray.splice(1, 0, "<img class=\"recap-primary\" src=\"" + data[0].photo1 + "\" />");
-			recaparray.splice(2, 0, "<p class=\"recap-caption\">" + data[0].caption1 + "</p>");
-			recaparray.splice(halfway, 0, "<img class=\"recap-secondary\" src=\"" + data[0].photo2 + "\" />");
-			recaparray.splice(halfway + 1, 0, "<p class=\"recap-caption\">" + data[0].caption2 + "</p>");
+			recaparray.splice(0, 0, "<h2 class=\"recap-headline\">" + todaysrecap.headline + "</h2>");
+			recaparray.splice(1, 0, "<img class=\"recap-primary\" src=\"" + todaysrecap.photo1 + "\" />");
+			recaparray.splice(2, 0, "<p class=\"recap-caption\">" + todaysrecap.caption1 + "</p>");
+			recaparray.splice(halfway, 0, "<img class=\"recap-secondary\" src=\"" + todaysrecap.photo2 + "\" />");
+			recaparray.splice(halfway + 1, 0, "<p class=\"recap-caption\">" + todaysrecap.caption2 + "</p>");
 			for (var i = 0; i < recaparray.length; i++) {
 				$(".recap").append(recaparray[i]);
 			}

@@ -4,6 +4,7 @@ body {
     overflow: hidden;
 }
 
+/* HEADER CSS HERE */
 .header-global {
     position: absolute;
     width: 100%;
@@ -11,11 +12,48 @@ body {
     text-align: center;
 }
 
+.header-global img {
+    position: absolute;
+    height: 3rem;
+    margin: 0.7rem;
+}
+
+img.header-db-logo {
+    left: 0;
+}
+
+img.header-coachella-logo {
+    right: 0;
+}
+
+h1.header-title-main {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+img.header-arrow-right {
+    right: 30vw;
+    height: 1.8rem;
+    margin-top: 1.3rem;
+}
+
+/* CONTENT CSS */
 .content-main {
     overflow-y: auto;
     padding-top: 70px;
     height: 100%;
     background-color: gray;
+}
+
+/* PHOTOESSAY CARDS */
+
+.photocard {
+    margin: auto;
+    height: auto;
+    max-width: 90vw;
+    width: 800px;
+    background-color: white;
+    margin-top: 3rem;
 }
 
 .card-top p {
@@ -41,11 +79,13 @@ p.cardcaption {
 
 img.cardpic {
     padding: 1rem 0rem 1rem 0rem;
-    max-height: 90vh;
+    max-height: 85vh;
     display: block;
     margin: 0 auto;
 }
 
+
+/* RECAP CSS*/
 .recap {
     display: none;
     margin: auto;
@@ -76,17 +116,3 @@ h2.recap-headline {
     font-weight: 300;
 }
 
-.photocard {
-    margin: auto;
-    height: auto;
-    max-width: 90vw;
-    width: 800px;
-    background-color: white;
-    margin-top: 3rem;
-}
-
-.photoessay {
-    background-color: gray;
-    /* width: 100%; */
-    height: 100vh;
-}
