@@ -18,11 +18,20 @@ body {
     background-color: gray;
 }
 
-p.timestamp {
-    padding-left: 1rem;
-    padding-top: 1rem;
+.card-top p {
+    padding: 1rem 1rem 0rem 1rem;
     margin-bottom: 0px;
     font-size: 1.4rem;
+    
+}
+
+p.timestamp {
+    font-weight: 300;
+    float: left;
+}
+
+p.cardartist {
+    float: right;
     font-weight: 600;
 }
 
@@ -31,7 +40,10 @@ p.cardcaption {
 }
 
 img.cardpic {
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
+    max-height: 90vh;
+    display: block;
+    margin: 0 auto;
 }
 
 .recap {
@@ -48,6 +60,20 @@ img.cardpic {
 .recap p {
     padding: 0rem 1rem 1rem 1rem;
     margin: 0;
+}
+
+p.recap-caption {
+    text-align: right;
+    padding-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+h2.recap-headline {
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .photocard {

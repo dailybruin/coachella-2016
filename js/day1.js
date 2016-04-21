@@ -17,7 +17,17 @@ function init() {
 	$.getJSON(recapsheeturl, function(data) {
 		data = clean_google_sheet_json(data);
 		if (data.length > 0) {
-			$(".recap").html(format_body_text(data[0].text));	
+			// $(".recap").html(format_body_text(data[0].text));	
+			var recaparray = format_body_text(data[0].text);
+			var halfway = Math.floor(recaparray.length / 2) + 3;
+			recaparray.splice(0, 0, "<h2 class=\"recap-headline\">" + data[0].headline + "</h2>");
+			recaparray.splice(1, 0, "<img class=\"recap-primary\" src=\"" + data[0].photo1 + "\" />");
+			recaparray.splice(2, 0, "<p class=\"recap-caption\">" + data[0].caption1 + "</p>");
+			recaparray.splice(halfway, 0, "<img class=\"recap-secondary\" src=\"" + data[0].photo2 + "\" />");
+			recaparray.splice(halfway + 1, 0, "<p class=\"recap-caption\">" + data[0].caption2 + "</p>");
+			for (var i = 0; i < recaparray.length; i++) {
+				$(".recap").append(recaparray[i]);
+			}
 			$(".recap").show();
 		}		
 	});
@@ -46,5 +56,6 @@ function clean_google_sheet_json(data){
 function format_body_text(t) {
 	t = t.trim();
 	var re = new RegExp('[\r\n]+', 'g');
-    return (t.length>0?'<p>'+t.replace(re,'</p><p>')+'</p>':null);
+    var str = t.length>0?'<p>'+t.replace(re,'</p>\n<p>')+'</p>':null;
+    return (str.split('\n'));
 }
