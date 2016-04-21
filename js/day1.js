@@ -9,10 +9,11 @@ function init() {
 	var photosheeturl = "https://spreadsheets.google.com/feeds/list/" + photosheetkey + "/od6/public/values?alt=json"; 
 	$.getJSON(photosheeturl, function(data) {
 		data = clean_google_sheet_json(data);
-		// console.log(data);
+		data = data.reverse();
 		$(".content-main").append(photocard_compiled({carddata: data}));
 	});
 
+	// RECAP HANDLING
 	var recapsheeturl = "https://spreadsheets.google.com/feeds/list/" + recapsheetkey + "/od6/public/values?alt=json"; 
 	$.getJSON(recapsheeturl, function(data) {
 		data = clean_google_sheet_json(data);

@@ -11,38 +11,72 @@ body {
     background-color: white;
     text-align: center;
 }
-
 .header-global img {
     position: absolute;
     height: 3rem;
     margin: 0.7rem;
 }
-
 img.header-db-logo {
     left: 0;
 }
-
 img.header-coachella-logo {
     right: 0;
 }
-
 h1.header-title-main {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
-
 img.header-arrow-right {
     right: 30vw;
     height: 1.8rem;
     margin-top: 1.3rem;
 }
+@media only screen and (max-width: 40em) { 
+    h1.header-title-main {
+        font-size: 3rem;
+    }
+    img.header-coachella-logo {
+        display: none;
+    }
+    img.header-arrow-right {
+        right: 10vw;
+    }
+}
 
 /* CONTENT CSS */
 .content-main {
     overflow-y: auto;
-    padding-top: 70px;
+    padding-top: 7rem;
     height: 100%;
     background-color: gray;
+}
+
+/* BYLINES */
+.bylines {
+    padding: 0.7rem;
+    width: 800px;
+    max-width: 90vw;
+    margin: auto;
+    background-color: white;
+}
+.leftbyline {
+    float: left;
+}
+.leftbyline p, .rightbyline p {
+    display: inline;
+    font-size: 1.2rem;
+}
+.rightbyline {
+    float: right;
+}
+.byline-emphasized {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 590px) { 
+    .leftbyline p, .rightbyline p {
+        font-size: 1rem;
+    }
 }
 
 /* PHOTOESSAY CARDS */
