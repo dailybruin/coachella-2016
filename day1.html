@@ -8,33 +8,50 @@
 
 	<!-- TODO: OG TAGS -->
 
-	<link rel="stylesheet" href="css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
+	<link rel="stylesheet" href="css/main.css">
+	
 </head>
 
 <body>
-<!-- HANDLEBARS TEMPLATE -->
+	<!-- HANDLEBARS TEMPLATE -->
+	<script id="card-template" type="text/x-handlebars-template">
+		{{#each carddata}}
+			<div class="photocard">
+				<p class="timestamp">{{time}}</p>
+				<img class="cardpic" src="{{photo-url}}"/>
+				<p class="cardcaption">{{caption}}</p>
+			</div>
+		{{/each}}
+	</script>
+	<!--  -->
 
-	<!-- <script type="text/template" class="photo-card">
-
-	</script> -->
-
+	<!-- GLOBAL HEADER -->
 	<div class="header-global">
 		<h1>Daily Bruin at Coachella 2016</h1>
 	</div>
+	<!--  -->
 
-	<div class="recap">
+	<!-- CONTENT WRAPPER -->
+	<div class="content-main">
+		<div class="recap">
+			
+		</div>
+
+		<!-- <div class="photocard">
+			<p class="timestamp">10 p.m.</p>
+			<img class="cardpic" src="http://i.imgur.com/sqzqDgp.jpg"/>
+			<p class="cardcaption">cat number one lives here</p>
+		</div> -->
+		
 		
 	</div>
 
-	<div class="photoessay">
-		<div class="photocard">
-			<div class="card-img" style="background: url('http://i.imgur.com/sqzqDgp.jpg') no-repeat; background-size: cover; background-position: center center;"></div>
-
-		</div>
-	</div>
+	<!-- SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 	<script src="js/day1.js"></script>
 </body>
 </html>

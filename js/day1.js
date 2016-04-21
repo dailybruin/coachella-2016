@@ -1,4 +1,6 @@
 var sheetkey = "1wxIlU9pjKDcAfZrX4XmzAfCBA1cpWP1TrmoUGpvWa-c";
+var photocard_template = $("#card-template").html();
+var photocard_compiled = Handlebars.compile(photocard_template);
 
 init();
 
@@ -6,7 +8,8 @@ function init() {
 	var url = "https://spreadsheets.google.com/feeds/list/" + sheetkey + "/od6/public/values?alt=json"; 
 	$.getJSON(url, function(data) {
 		data = clean_google_sheet_json(data);
-		console.log(data);
+		// console.log(data);
+		$(".content-main").append(photocard_compiled({carddata: data}));
 	});
 };
 

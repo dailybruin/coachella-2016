@@ -1,23 +1,46 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+    overflow: hidden;
 }
 
-.header-global h1 {
+.header-global {
+    position: absolute;
+    width: 100%;
+    background-color: white;
     text-align: center;
 }
 
-.photoessay {
-	background-color: gray;
+.content-main {
+    overflow-y: auto;
+    padding-top: 70px;
+    height: 100%;
+    background-color: gray;
 }
 
-.card-img {
-    height: 40vw;
+p.timestamp {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 0px;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
+
+p.cardcaption {
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+img.cardpic {
+    padding: 1rem;
+}
+
 .photocard {
     margin: auto;
     height: auto;
-    width: 70vw;
+    max-width: 90vw;
+    width: 800px;
+    background-color: white;
+    margin-top: 3rem;
 }
 
 .photoessay {
