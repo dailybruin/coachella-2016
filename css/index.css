@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("http://i.imgur.com/ejwxvyR.jpg");
+    background-image: url("http://dailybruin.com/images/2016/04/coachella-16-cover.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -18,12 +18,24 @@ p, h1 {
 	height: 10vh;
 }
 
+.byline-bottom {
+	position: absolute;
+	bottom: 0;
+	right: 1rem;
+	background: rgba(255,255,255,0.7);
+	padding: 0 1rem 0 1rem;
+}
+
 .db-logo {
     left: 0;
     bottom: 0;
     width: 2.5rem;
     margin: 0.8rem;
     position: absolute;
+}
+
+.bolded {
+	font-weight: 600;
 }
 
 .coachella-logo {
@@ -35,15 +47,31 @@ p, h1 {
 	max-width: 100vw;
 }
 
+.byline-bottom p {
+	margin: 0.2rem;
+}
+
+.byline {
+	float: right;
+}
+
 @media only screen and (max-width: 40em) {
 	.db-logo {
 		width: 2rem;
+		z-index: 2;
+		bottom: -7px;
 	}
 	.coachella-logo {
-		margin: 0 auto 1vh auto;
+		margin: -2rem auto 1vh auto;
 	}
 	.top-spacer {
 		height: 4vh;
+	}
+	.byline-bottom p {
+		margin: 0;
+	}
+	.byline-bottom {
+		right: 0;
 	}
 }
 
