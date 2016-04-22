@@ -21,6 +21,7 @@ img.header-db-logo {
 }
 img.header-coachella-logo {
     right: 0;
+    height: 3.2rem;
 }
 h1.header-title-main {
     font-family: 'Open Sans', sans-serif;
@@ -30,7 +31,31 @@ img.header-arrow-right {
     right: 30vw;
     height: 1.8rem;
     margin-top: 1.3rem;
+    transition: opacity 1s;
 }
+
+/* TOOLTIP RIGHT ARROW CSS */
+.coming-soon-tooltip {
+    opacity: 0;
+    text-align: center;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 1s;
+    right: 25vw;
+    top: 2.5rem;
+}
+.coming-soon-tooltip p {
+    margin: 0;
+}
+.right-arrow-div:hover .coming-soon-tooltip {
+    opacity: 1;
+}
+.right-arrow-div:hover .header-arrow-right {
+    opacity: 0.4;
+}
+/* */
+
 @media only screen and (max-width: 40em) { 
     h1.header-title-main {
         font-size: 3rem;
@@ -41,14 +66,19 @@ img.header-arrow-right {
     img.header-arrow-right {
         right: 10vw;
     }
+    .coming-soon-tooltip {
+        right: 0vw;
+    }
 }
+
 
 /* CONTENT CSS */
 .content-main {
     overflow-y: auto;
     padding-top: 7rem;
     height: 100%;
-    background-color: gray;
+    /*background-color: gray;*/
+    background-image: url("../icon/stardust.png");
 }
 
 /* BYLINES */
@@ -71,6 +101,9 @@ img.header-arrow-right {
 }
 .byline-emphasized {
     font-weight: 600;
+}
+#bottom-byline {
+    margin-top: 3rem;
 }
 
 @media only screen and (max-width: 590px) { 
