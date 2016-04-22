@@ -99,6 +99,14 @@ img.header-arrow-right {
     display: inline;
     font-size: 1.2rem;
 }
+
+.leftbyline-bottom {
+    float: left;
+}
+.leftbyline-bottom p {
+    display: inline;
+    font-size: 1.2rem;
+}
 .rightbyline {
     float: right;
 }
@@ -107,6 +115,7 @@ img.header-arrow-right {
 }
 #bottom-byline {
     margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 590px) { 
