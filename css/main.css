@@ -90,6 +90,7 @@ img.header-arrow-right {
     background-color: white;
 }
 .leftbyline {
+    display: none;
     float: left;
 }
 .leftbyline p, .rightbyline p {
