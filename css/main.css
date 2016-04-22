@@ -78,7 +78,9 @@ img.header-arrow-right {
     padding-top: 7rem;
     height: 100%;
     /*background-color: gray;*/
-    background-image: url("../icon/stardust.png");
+    background-image: url("http://dailybruin.com/images/2016/04/coachella-16-sky-bg.jpg");
+    background-size: cover;
+    background-position: center center;
 }
 
 /* BYLINES */
