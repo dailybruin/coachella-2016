@@ -3,6 +3,12 @@ var recapsheetkey = "1ffCXCveuwLrG7jL20bTsATxGIxSWDvjTloNQAn_3H-M";
 var photocard_template = $("#card-template").html();
 var photocard_compiled = Handlebars.compile(photocard_template);
 
+Handlebars.registerHelper("formatcaptiontext", function(t) {
+	t = t.trim();
+	var re = new RegExp('[\r\n]+', 'g');
+    return (t.length>0?'<p class="cardcaption">'+t.replace(re,'</p><p class="cardcaption">')+'</p>':null);
+});
+
 init();
 
 function init() {
