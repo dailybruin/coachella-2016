@@ -102,6 +102,9 @@ img.header-arrow-right {
 .byline-emphasized {
     font-weight: 600;
 }
+#bottom-byline {
+    margin-top: 3rem;
+}
 
 @media only screen and (max-width: 590px) { 
     .leftbyline p, .rightbyline p {

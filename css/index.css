@@ -9,6 +9,11 @@ body {
     overflow: hidden;
 }
 
+p, h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
 .top-spacer {
 	height: 10vh;
 }
@@ -23,10 +28,11 @@ body {
 
 .coachella-logo {
 	display: block;
-	margin: 0 auto 10vh auto;
+	margin: 0 auto 7vh auto;
 	left: 0;
 	right: 0;
-	height: 12vh;
+	height: 16vh;
+	max-width: 100vw;
 }
 
 @media only screen and (max-width: 40em) {
@@ -34,7 +40,7 @@ body {
 		width: 2rem;
 	}
 	.coachella-logo {
-		margin: 0 auto 4vh auto;
+		margin: 0 auto 1vh auto;
 	}
 	.top-spacer {
 		height: 4vh;
@@ -43,16 +49,38 @@ body {
 
 .boxes-container {
 	margin: auto;
-	width: 70vw;
-	max-width: 590px;
+	width: 590px;
 }
 
 .day1-box, .day2-box, .day3-box, .after-box {
-	background-color: white;
-	float: left;
-	width: 43%;
-	height: 20vh;
-	margin: 3.5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    float: left;
+    width: 43%;
+    height: 20vh;
+    line-height: 100%;
+    margin: 3.5%;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.box-title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin-top: 9vh;
+	font-size: 3rem;
+}
+
+h1#after-title-1 {
+    margin: 6vh 0 0 0;
+}
+h1#after-title-2 {
+	margin: 5vh 0 2vh 0;
+}
+
+@media only screen and (max-height: 700px) {
+	h1#after-title-1 {
+	    margin: 5vh 0 0 0;
+	}
 }
 
 @media only screen and (max-width: 40em) { 
@@ -65,4 +93,25 @@ body {
 		margin-bottom: 10%;
 		height: 15vh;
 	}
+	.box-title {
+		font-size: 4.2vh;
+		margin-top: 6.2vh;
+	}
+	h1#after-title-1 {
+	    margin: 3.5vh 0 0 0;
+	}
+	h1#after-title-2 {
+		margin: 3vh 0 1vh 0;
+	}
+}
+
+/* COMING SOON HOVER & GREY */
+
+.day2-box h1, .day3-box h1, .after-box h1 {
+	opacity: 0.4;
+}
+
+.coming-soon {
+	opacity: 0;
+	transition: opacity 1s;
 }

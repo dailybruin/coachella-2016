@@ -11,7 +11,22 @@ function init() {
 		data = clean_google_sheet_json(data);
 		data = data.reverse();
 		$(".content-main").append(photocard_compiled({carddata: data}));
-	});
+		$(".content-main").append($("#webdev-byline").html());
+
+		$("#bottom-byline").hover(function() {
+			$("#bottom-byline-text").fadeOut(function() {
+			  $(this).text("github.com/jbrundrett")
+			}).fadeIn();
+		}, function() {
+			$("#bottom-byline-text").fadeOut(function() {
+			  $(this).text("JULIEN BRUNDRETT")
+			}).fadeIn();
+		});
+
+		$("#bottom-byline").click(function() {
+			window.location = 'https://github.com/jbrundrett';
+		});
+	});	
 
 	// RECAP HANDLING
 	var recapsheeturl = "https://spreadsheets.google.com/feeds/list/" + recapsheetkey + "/od6/public/values?alt=json"; 
