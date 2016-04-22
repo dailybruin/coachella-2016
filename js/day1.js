@@ -11,21 +11,24 @@ function init() {
 		data = clean_google_sheet_json(data);
 		data = data.reverse();
 		$(".content-main").append(photocard_compiled({carddata: data}));
-		$(".content-main").append($("#webdev-byline").html());
+		
+		if (data.length > 2) {
+			$(".content-main").append($("#webdev-byline").html());
 
-		$("#bottom-byline").hover(function() {
-			$("#bottom-byline-text").fadeOut(function() {
-			  $(this).text("github.com/jbrundrett")
-			}).fadeIn();
-		}, function() {
-			$("#bottom-byline-text").fadeOut(function() {
-			  $(this).text("JULIEN BRUNDRETT")
-			}).fadeIn();
-		});
+			$("#bottom-byline").hover(function() {
+				$("#bottom-byline-text").fadeOut(function() {
+				  $(this).text("github.com/jbrundrett")
+				}).fadeIn();
+			}, function() {
+				$("#bottom-byline-text").fadeOut(function() {
+				  $(this).text("JULIEN BRUNDRETT")
+				}).fadeIn();
+			});
 
-		$("#bottom-byline").click(function() {
-			window.location = 'https://github.com/jbrundrett';
-		});
+			$("#bottom-byline").click(function() {
+				window.location = 'https://github.com/jbrundrett';
+			});
+		}
 	});	
 
 	// RECAP HANDLING
@@ -33,6 +36,7 @@ function init() {
 	$.getJSON(recapsheeturl, function(data) {
 		data = clean_google_sheet_json(data);
 		if (data.length > 0) {
+			$(".leftbyline").show();
 			// $(".recap").html(format_body_text(todaysrecap.text));
 			var todaysrecap = data[0];
 			var recaparray = format_body_text(todaysrecap.text);
@@ -46,7 +50,7 @@ function init() {
 				$(".recap").append(recaparray[i]);
 			}
 			$(".recap").show();
-		}		
+		}
 	});
 };
 
