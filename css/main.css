@@ -48,7 +48,8 @@ img.header-arrow-right {
     overflow-y: auto;
     padding-top: 7rem;
     height: 100%;
-    background-color: gray;
+    /*background-color: gray;*/
+    background-image: url("../icon/stardust.png");
 }
 
 /* BYLINES */

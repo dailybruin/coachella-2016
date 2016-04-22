@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("http://i.imgur.com/ejwxvyR.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.top-spacer {
+	height: 10vh;
+}
+
+.db-logo {
+    left: 0;
+    bottom: 0;
+    width: 2.5rem;
+    margin: 0.8rem;
+    position: absolute;
+}
+
+.coachella-logo {
+	display: block;
+	margin: 0 auto 10vh auto;
+	left: 0;
+	right: 0;
+	height: 12vh;
+}
+
+@media only screen and (max-width: 40em) {
+	.db-logo {
+		width: 2rem;
+	}
+	.coachella-logo {
+		margin: 0 auto 4vh auto;
+	}
+	.top-spacer {
+		height: 4vh;
+	}
+}
+
+.boxes-container {
+	margin: auto;
+	width: 70vw;
+	max-width: 590px;
+}
+
+.day1-box, .day2-box, .day3-box, .after-box {
+	background-color: white;
+	float: left;
+	width: 43%;
+	height: 20vh;
+	margin: 3.5%;
+}
+
+@media only screen and (max-width: 40em) { 
+	.boxes-container {
+		width: 11rem;
+	}
+
+	.day1-box, .day2-box, .day3-box, .after-box {
+		width: 100%;
+		margin-bottom: 10%;
+		height: 15vh;
+	}
+}
