@@ -33,6 +33,17 @@ img.header-arrow-right {
     margin-top: 1.3rem;
     transition: opacity 1s;
 }
+img.header-arrow-left {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    left: 30vw;
+    height: 1.8rem;
+    margin-top: 1.3rem;
+}
 
 /* TOOLTIP RIGHT ARROW CSS */
 .coming-soon-tooltip {
@@ -48,12 +59,7 @@ img.header-arrow-right {
 .coming-soon-tooltip p {
     margin: 0;
 }
-.right-arrow-div:hover .coming-soon-tooltip {
-    opacity: 1;
-}
-.right-arrow-div:hover .header-arrow-right {
-    opacity: 0.4;
-}
+
 /* */
 
 @media only screen and (max-width: 40em) { 
@@ -63,8 +69,14 @@ img.header-arrow-right {
     img.header-coachella-logo {
         display: none;
     }
+    img.header-db-logo {
+        display: none;
+    }
     img.header-arrow-right {
         right: 10vw;
+    }
+    img.header-arrow-left {
+        left: 10vw;
     }
     .coming-soon-tooltip {
         right: 0vw;

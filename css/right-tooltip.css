@@ -1,0 +1,6 @@
+.right-arrow-div:hover .coming-soon-tooltip {
+    opacity: 1;
+}
+.right-arrow-div:hover .header-arrow-right {
+    opacity: 0.4;
+}

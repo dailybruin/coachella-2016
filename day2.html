@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Daily Bruin at Coachella 2016: Day 2</title>
+
+	<!-- TODO: OG TAGS -->
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/right-tooltip.css">
+	
+</head>
+
+<body>
+	<!-- HANDLEBARS TEMPLATES -->
+	<script id="card-template" type="text/x-handlebars-template">
+		{{#each carddata}}
+			<div class="photocard">
+				<div class="card-top">
+					<p class="timestamp">{{time}}</p>
+					<p class="cardartist">{{artist}}</p>
+					<div style="clear: both;"></div>
+				</div>
+				<img class="cardpic" src="{{photo-url}}"/>
+				<!-- <p class="cardcaption">{{caption}}</p> -->
+				{{{formatcaptiontext caption}}}
+			</div>
+		{{/each}}
+	</script>
+	<script id="webdev-byline" type="text/x-handlebars-template">
+		<div class="bylines" id="bottom-byline">
+			<div class="leftbyline-bottom">
+				<p class="byline-boring">website design by </p>
+				<p class="byline-emphasized" id="bottom-byline-text">JULIEN BRUNDRETT</p>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</script>
+	<!--  -->
+
+	<!-- GLOBAL HEADER -->
+	<div class="header-global">
+		<a href="http://dailybruin.com/">
+			<img class="header-db-logo" src="http://dailybruin.com/images/2015/09/Daily-Bruin-Logo.png" />
+		</a>
+		<a href="index.html">
+			<img class="header-coachella-logo" src="icon/coachella-logo.svg" />
+		</a>
+		<!-- LINK TO DAY 2 HERE -->
+		<div class="left-arrow-div">
+
+			<a href="day1.html">
+				<img class="header-arrow-left" src="icon/iconmonstr-arrow-25-240.png" />
+			</a>
+		</div>
+		<!-- LINK TO DAY 3 HERE -->
+		<div class="right-arrow-div">
+
+			<!-- <a href="#"> -->
+				<img class="header-arrow-right" src="icon/iconmonstr-arrow-25-240.png" />
+			<!-- </a> -->
+			<span class="coming-soon-tooltip"><p class="coming-soon">Day 3 coming soon!</p></span>
+		</div>
+		<a href="index.html">
+			<h1 class="header-title-main">DAY 2</h1>
+		</a>
+	</div>
+	<!--  -->
+
+	<!-- CONTENT WRAPPER -->
+	<div class="content-main">
+		<div class="bylines">
+			<div class="leftbyline">
+				<p class="byline-boring">article by </p>
+				<p class="byline-emphasized">GAIL ACOSTA</p>
+			</div>
+			<div class="rightbyline">
+				<p class="byline-boring">photography by </p>
+				<p class="byline-emphasized">DANIEL ALCAZAR</p>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+		<div class="recap">
+			
+		</div>
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+	<script src="js/day2.js"></script>
+</body>
+</html>
