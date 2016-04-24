@@ -95,6 +95,12 @@ img.header-arrow-left {
     background-position: center 100%;
 }
 
+@media only screen and (max-width: 40em) { 
+    .content-main {
+        background-position: 90% 100%;
+    }
+}  
+
 /* BYLINES */
 .bylines {
     padding: 0.7rem;
