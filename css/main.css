@@ -92,7 +92,7 @@ img.header-arrow-left {
     /*background-color: gray;*/
     background-image: url("../icon/background.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center 100%;
 }
 
 /* BYLINES */
