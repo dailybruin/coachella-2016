@@ -133,13 +133,13 @@ h1#after-title-2 {
 	}
 }
 
-.day1-box h1, .day2-box h1 {
+.day1-box h1, .day2-box h1, .day3-box h1 {
 	color: black;
 }
 
 /* COMING SOON HOVER & GREY */
 
-.day3-box h1, .after-box h1 {
+.after-box h1 {
 	opacity: 0.4;
 }
 
