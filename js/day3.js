@@ -50,8 +50,11 @@ function init() {
 			recaparray.splice(0, 0, "<h2 class=\"recap-headline\">" + todaysrecap.headline + "</h2>");
 			recaparray.splice(1, 0, "<img class=\"recap-primary\" src=\"" + todaysrecap.photo1 + "\" />");
 			recaparray.splice(2, 0, "<p class=\"recap-caption\">" + todaysrecap.caption1 + "</p>");
-			recaparray.splice(halfway, 0, "<img class=\"recap-secondary\" src=\"" + todaysrecap.photo2 + "\" />");
-			recaparray.splice(halfway + 1, 0, "<p class=\"recap-caption\">" + todaysrecap.caption2 + "</p>");
+			if (todaysrecap.photo2)
+			{
+				recaparray.splice(halfway, 0, "<img class=\"recap-secondary\" src=\"" + todaysrecap.photo2 + "\" />");
+				recaparray.splice(halfway + 1, 0, "<p class=\"recap-caption\">" + todaysrecap.caption2 + "</p>");
+			}
 			for (var i = 0; i < recaparray.length; i++) {
 				$(".recap").append(recaparray[i]);
 			}
