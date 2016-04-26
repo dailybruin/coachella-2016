@@ -119,6 +119,13 @@ h1#after-title-2 {
 	}
 }
 
+@media only screen and (min-width: 40em) {
+	.day3-box {
+		margin-left: 28%;
+	}	
+}
+
+
 @media only screen and (max-width: 40em) { 
 	.boxes-container {
 		width: 11rem;
@@ -145,9 +152,6 @@ h1#after-title-2 {
 	color: black;
 }
 
-.day3-box {
-	margin-left: 28%;
-}
 /* COMING SOON HOVER & GREY */
 
 .after-box h1 {
